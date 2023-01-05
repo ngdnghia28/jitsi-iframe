@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script src="https://172.16.0.144:31233/external_api.js"></script>
+  </head>
+
+  <body>
+    <div id="meet"></div>
+
+    <script>
+      const domain = "172.16.0.144:31233";
+      const options = {
+        roomName: "CaptureScreenShotDemo6734598973",
+        parentNode: document.querySelector("#meet"),
+        userInfo: {
+          email: "email@jitsiexamplemail.com",
+          displayName: "Nam",
+        },
+        onload: () => {
+          console.log("wdtfs");
+          // document.getElementById("capture").removeAttribute("disabled");
+        },
+      };
+      const api = new JitsiMeetExternalAPI(domain, options);
+
+      // document.getElementById("capture").onclick = () => {
+      //   api.captureLargeVideoScreenshot().then((data) => {
+      //     const blob = data.dataURL;
+      //     if (!blob) {
+      //       console.log("Nothing to capture yet.");
+      //       return;
+      //     }
+
+      //     // Trigger image download by adding temp link
+      //     var link = document.createElement("a");
+      //     const timestamp = +new Date();
+      //     link.download = "screenshot" + timestamp + ".png";
+      //     link.href = blob;
+      //     document.body.appendChild(link);
+      //     link.click();
+      //     document.body.removeChild(link);
+      //   });
+      // };
+    </script>
+  </body>
+</html>
